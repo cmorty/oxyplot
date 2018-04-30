@@ -93,6 +93,12 @@ namespace OxyPlot.Series
                 return null;
             }
 
+            // This happens when the series was create, but no points were added yet
+            if(this.ActualPoints == null) 
+            {
+                return null;
+            }
+
             TrackerHitResult result = null;
             if (interpolate)
             {
